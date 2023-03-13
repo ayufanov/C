@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.10.0)
+project(tree-iterator CXX)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_EXTENSIONS OFF)
+add_executable(iterator_test tree.cpp test.cpp)
+target_link_libraries(iterator_test PUBLIC doctest default)
+add_test(NAME iterator_test COMMAND iterator_test --force-colors -d)
